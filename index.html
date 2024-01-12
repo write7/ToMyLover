@@ -4078,6 +4078,17 @@
         window._sp_async = 1;
 
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('form').onsubmit = function(event) {
+                var inputValue = document.getElementById('kw').value;
+                if (inputValue !== '林秋萍') {
+                    alert('老婆笨蛋，要输入自己的名字啦。');
+                    event.preventDefault(); // 阻止表单的默认提交行为
+                }
+            };
+        });
+    </script>
     <noscript>
         <meta http-equiv=refresh content="0; url=/baidu.html?from=noscript">
     </noscript>
